@@ -11,7 +11,7 @@ FastMySql class
 use for the purpose, the following global constants:   
 define('DB_HOST', "p:your.db.ip.address");    
 define('DB_USER', "your_dbuser");    
-define('DB_PASSWORD', "your_dbuser_password");    
+define('DB_PASSWORD', "your_dbpassword");    
 define('DB_DBNAME', "your_db_name");    
 define('DB_CHARSET', "utf8");     
 
