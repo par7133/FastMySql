@@ -26,9 +26,9 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * class.fastdb.inc
+ * class.fastmysql.inc
  * 
- * FastDB class.
+ * FastMySql class.
  *
  * @author Daniele Bonini <my25mb@aol.com>
  * @copyrights (c) 2016, 2022, the Open Gallery's contributors http://opengallery.media
