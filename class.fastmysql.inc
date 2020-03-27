@@ -218,7 +218,7 @@ class FastMySql extends \mysqli
     
     if (!($preparedStmt = $this->prepare($sSQL))) {
       $this->rollback();
-      FastErr::trigger_error1(ERR::ERR_GENERAL, "Prepare failed: (" . $this->errno . ") " . $this->error, __FILE__, __LINE__);        
+      FastErr::trigger_error1(ERR::ERR_GENERAL, "Preparetion failed: (" . $this->errno . ") " . $this->error, __FILE__, __LINE__);        
     }
 
     // if the params array is not empty..
@@ -290,7 +290,7 @@ class FastMySql extends \mysqli
       
     if (!($preparedStmt = $this->prepare($sSQL))) {
       $this->rollback();
-      FastErr::trigger_error1(ERR::ERR_GENERAL, "Prepare failed: (" . $this->errno . ") " . $this->error, __FILE__, __LINE__);        
+      FastErr::trigger_error1(ERR::ERR_GENERAL, "Preparetion failed: (" . $this->errno . ") " . $this->error, __FILE__, __LINE__);        
     }
 
     // if the params array is not empty..
@@ -373,7 +373,7 @@ class FastMySql extends \mysqli
     
     if (!($preparedStmt = $this->prepare($sSQL))) {
       $this->rollback();
-      FastErr::trigger_error1(ERR::ERR_GENERAL, "Prepare failed: (" . $this->errno . ") " . $this->error, __FILE__, __LINE__);        
+      FastErr::trigger_error1(ERR::ERR_GENERAL, "Preparetion failed: (" . $this->errno . ") " . $this->error, __FILE__, __LINE__);        
     }
 
     // if the params array is not empty..
@@ -484,7 +484,7 @@ class FastMySql extends \mysqli
         
     if (!($preparedStmt = $this->prepare($sSQL))) {
       $this->rollback();
-      FastErr::trigger_error1(ERR::ERR_GENERAL, "Prepare failed: (" . $this->errno . ") " . $this->error, __FILE__, __LINE__);        
+      FastErr::trigger_error1(ERR::ERR_GENERAL, "Preparetion failed: (" . $this->errno . ") " . $this->error, __FILE__, __LINE__);        
     }
 
     // if the params array is not empty..
