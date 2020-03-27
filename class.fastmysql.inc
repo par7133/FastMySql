@@ -122,8 +122,6 @@ class FastMySql extends \mysqli
   
   /**
    * Default constructor
-   * 
-   * @return void
    */
   private function __construct($host = null, $username = null, $passwd = "", $dbname = null, $port = null, $socket = null)
   {
@@ -133,9 +131,9 @@ class FastMySql extends \mysqli
   /**
    * Start a transaction
    * 
-   * @param type $flags valid flags
-   * @param type $name [optional] Savepoint name for the transaction
-   * @return type
+   * @param int $flags valid flags
+   * @param string $name [optional] Savepoint name for the transaction
+   * @return bool TRUE on success or FALSE on failure
    */
   public function begin_transaction($flags = null, $name = null) 
   {
@@ -152,8 +150,8 @@ class FastMySql extends \mysqli
   /**
    * Commits the current transaction
    * 
-   * @param type $flags A bitmask of MYSQLI_TRANS_COR_* constants
-   * @param type $name If provided then COMMIT/*name* / is executed
+   * @param int $flags A bitmask of MYSQLI_TRANS_COR_* constants
+   * @param string $name If provided then COMMIT/*name* / is executed
    * @return boolean TRUE on success or FALSE on failure
    */
   public function commit($flags = null, $name = null) 
@@ -186,8 +184,8 @@ class FastMySql extends \mysqli
   /**
    * Rolls back current transaction
    * 
-   * @param type $flags A bitmask of MYSQLI_TRANS_COR_* constants.
-   * @param type $name If provided then ROLLBACK/*name* / is executed.
+   * @param int $flags A bitmask of MYSQLI_TRANS_COR_* constants.
+   * @param string $name If provided then ROLLBACK/*name* / is executed.
    * @return boolean TRUE on success or FALSE on failure.
    */
   public function rollback($flags = null, $name = null) 
@@ -212,7 +210,7 @@ class FastMySql extends \mysqli
    * 
    * @param string $sSQL the SQL string
    * @param array $aParams the parameters in the format [["type", $param], .. ], eg. [["s",$q], .. ]
-   * @return integer the number of the affected rows
+   * @return int the number of the affected rows
    */
   public function delete($sSQL, $aParams = [])
   {
@@ -272,7 +270,7 @@ class FastMySql extends \mysqli
    * 
    * @param string $sSQL the SQL string
    * @param array $aParams the parameters in the format [["type", $param], .. ], eg. [["s",$q], .. ]
-   * @return integer the number of affected rows
+   * @return int the number of affected rows
    */
   public function delete_SP($sSQL, $aParams = [])
   {
@@ -344,7 +342,7 @@ class FastMySql extends \mysqli
    * 
    * @param string $sSQL the SQL string
    * @param array $aParams the parameters in the format [["type", $param], .. ], eg. [["s",$q], .. ]
-   * @return integer the insert id
+   * @return int the insert id
    */
   public function insert_SP($sSQL, $aParams = [])
   {
@@ -478,7 +476,7 @@ class FastMySql extends \mysqli
    * 
    * @param string $sSQL the SQL string
    * @param array $aParams the parameters in the format [["type", $param], .. ], eg. [["s",$q], .. ]
-   * @return integer the number of the affected rows
+   * @return int the number of the affected rows
    */
   public function update($sSQL, $aParams = [])
   {
@@ -538,7 +536,7 @@ class FastMySql extends \mysqli
    * 
    * @param string $sSQL the SQL string
    * @param array $aParams the parameters in the format [["type", $param], .. ], eg. [["s",$q], .. ]
-   * @return integer the number of affected rows
+   * @return int the number of affected rows
    */
   public function update_SP($sSQL, $aParams = [])
   {
