@@ -79,8 +79,6 @@ class FastMySql extends \mysqli
   
   /**
    * Get the static instance of FastMySql
-   * 
-   * @return FastMySql
    */
   public static function &getInstance()
   {  
@@ -152,7 +150,7 @@ class FastMySql extends \mysqli
    * 
    * @param int $flags A bitmask of MYSQLI_TRANS_COR_* constants
    * @param string $name If provided then COMMIT/*name* / is executed
-   * @return boolean TRUE on success or FALSE on failure
+   * @return bool TRUE on success or FALSE on failure
    */
   public function commit($flags = null, $name = null) 
   {
@@ -186,7 +184,7 @@ class FastMySql extends \mysqli
    * 
    * @param int $flags A bitmask of MYSQLI_TRANS_COR_* constants.
    * @param string $name If provided then ROLLBACK/*name* / is executed.
-   * @return boolean TRUE on success or FALSE on failure.
+   * @return bool TRUE on success or FALSE on failure.
    */
   public function rollback($flags = null, $name = null) 
   {
@@ -282,7 +280,7 @@ class FastMySql extends \mysqli
    * 
    * @param string $sSQL the SQL string
    * @param array $aParams the parameters in the format [["type", $param], .. ], eg. [["s",$q], .. ]
-   * @return integer the insert id
+   * @return int the insert id
    */
   public function insert($sSQL, $aParams = [])
   {
