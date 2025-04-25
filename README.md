@@ -33,6 +33,12 @@ function array_keys_count(& $array)
   return count(array_keys($array));      
 }     
       
-This class makes use of the class FastErr, part of the Open Gallery
+This class makes use of the class FastErr, part of the same
 project and developed by me http://github.com/par7133
+
+For any need of software additions, plugins and improvements please write to <a href="mailto:info@5mode.com">info@5mode.com</a>  
+
+To help please donate by clicking <a href="https://gaox.io/l/dona1">https://gaox.io/l/dona1</a> and filling the form.  
+
+Feedback: <a href="code@gaox.io">code@gaox.io</a>
 
